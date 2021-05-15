@@ -182,12 +182,14 @@ body {
 }
 
 .hero-conteiner {
+  display: flex;
   padding: 200px 452px;
+  text-align: center;
+  justify-content: center;
 }
 
 .hero {
   background-color: #2f303a;
-  text-align: center;
 }
 
 .modal-btn {
