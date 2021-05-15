@@ -30,10 +30,11 @@ img {
 }
 
 .container {
-  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  width: 1200px;
 }
 
 :root {
@@ -55,6 +56,19 @@ img {
 body {
   font-family: var(--main-font);
   color: var(--dominante-color);
+}
+
+.hidden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* =========COMPONENTS======== */
@@ -116,7 +130,7 @@ body {
 
 .contacts {
   display: flex;
-  justify-content: space-between;
+  margin-left: auto;
 }
 
 .contacts-item:not(:last-child) {
@@ -182,10 +196,8 @@ body {
 }
 
 .hero-conteiner {
-  display: flex;
-  padding: 200px 452px;
-  text-align: center;
-  justify-content: center;
+  padding: 200px 0;
+  align-items: center;
 }
 
 .hero {
@@ -204,6 +216,8 @@ body {
   cursor: pointer;
   border-radius: 4px;
   padding: 10px 32px;
+  display: block;
+  margin: 0 auto;
 }
 
 .modal-btn:hover,
@@ -244,43 +258,48 @@ body {
 .doing-conteiner {
   display: flex;
   align-items: center;
-  background: url(close-up-image-programer-working-his-desk-office_1098-18707.jpg);
   mix-blend-mode: normal;
   margin-left: -30px;
   margin-right: -30px;
   flex-basis: calc((100% - 90px) / 3);
 }
 
-.what-are-we-doing-img {
-  margin-left: 30px;
+.what-are-we-doing-item:not(:last-child) {
   margin-right: 30px;
 }
 
 .title-what-are-we-doing {
   margin-bottom: 50px;
 }
+
 /* ========END WHAT WE DOING====== */
 
 /* ========OUR TEAM=========== */
 
 .our-team-list {
   display: flex;
+  align-items: center;
+  mix-blend-mode: normal;
   margin-left: -30px;
   margin-right: -30px;
   flex-basis: calc((100% - 120px) / 4);
 }
 
-.our-team-item {
-  margin-left: 30px;
+.our-team-item:not(:last-child) {
   margin-right: 30px;
-}
-
-.our-team {
-  background: #f5f4fa;
 }
 
 .team-div {
   padding-top: 30px;
+  padding-bottom: 30px;
+  background: #FFFFFF
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.our-team {
+  background: #f5f4fa;
 }
 
 .our-team-title {
@@ -345,7 +364,8 @@ body {
 }
 
 .footer-container {
-  padding: 60px auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* =========END FOOTER======= */
@@ -376,10 +396,11 @@ body {
 .filters-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 56px;
 }
 
 .filters-item:not(:last-child) {
-  margin-right: 52px;
+  margin-right: 10px;
 }
 
 .section-portfolio {
@@ -403,14 +424,6 @@ body {
   min-width: 370px;
 }
 
-.project-conteiner {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-}
-
 .project {
   margin-left: 30px;
   margin-top: 30px;
@@ -420,10 +433,23 @@ body {
 .project-card {
   padding-top: 20px;
   border: 1px solid #eeeeee;
-  min-width: 370px;
 }
 
-.project-card:not(:last-child) {
+.project-list:not(:last-child) {
   margin-right: 30px;
 }
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+  flex-basis: calc((100% - 90px) / 3);
+  } 
+
+  .project-list{
+  margin-left: 30px;
+  margin-top: 30px;
+  }
+
 /* ============END PROJECT======= */
