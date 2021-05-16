@@ -335,11 +335,6 @@ body {
   background: #2f303a;
 }
 
-.address {
-  margin-top: 20px;
-  margin-bottom: 9px;
-}
-
 .logo-studio-footer {
   color: white;
 }
@@ -351,6 +346,8 @@ body {
   font-size: 26px;
   line-height: 31px;
   letter-spacing: 0.03em;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .description-address {
@@ -392,8 +389,13 @@ body {
   padding-bottom: 60px;
 }
 
-.footer-list {
+.footer-list:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.footer-mail,
+.footer-tel {
+  display: block;
 }
 
 /* =========END FOOTER======= */
